@@ -1,4 +1,7 @@
 import React from 'react';
+import DashTitle from '../Dashboard/DashTitle';
+import { Outlet } from 'react-router-dom';
+import DashNav from '../Dashboard/DashNav';
 
 const DashboardLayout = () => {
     return (
@@ -6,12 +9,12 @@ const DashboardLayout = () => {
             <div className="hidden lg:flex bg-[#E9F7FF] ">
 
                 <div className="flex lg: bg-white">
-                    {type === "admin" ? <AdminNav /> : <DashNav />}
+                     <DashNav />
 
                 </div>
 
                 <div className="w-full bg-[#E9F7FF]">
-                    <Dashboardtitle />
+                    <DashTitle />
                     <div className="py-4 lg:mx-4 min-h-screen">
                         <Outlet></Outlet>
                     </div>
@@ -21,7 +24,7 @@ const DashboardLayout = () => {
             <div className=" lg:hidden bg-[#E9F7FF] ">
 
 
-                {type === "admin" ? <AdminNav /> : <DashNav />}
+                 <DashNav />
 
 
 
