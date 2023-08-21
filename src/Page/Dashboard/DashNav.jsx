@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { Icon } from "@iconify/react";
 import { useState } from "react";
 import DashTitle from "./DashTitle";
+import { Icon } from "@iconify/react";
 
 const DashNav = () => {
   const { user } = useContext(AuthContext)
@@ -41,50 +41,17 @@ const DashNav = () => {
             </Link>
             <Link to="/dashboard/neworder" onClick={toTop}>
               <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-                New Order
+                Price
               </p>
             </Link>
             <Link to="/dashboard/customorder" onClick={toTop}>
               <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-                Custom Order
+                Awards
               </p>
             </Link>
 
 
-            <Link to="/dashboard/orders" onClick={toTop}>
-              <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-                Orders
-              </p>
-            </Link>
-            <Link to="/dashboard/ourteam" onClick={toTop}>
-              <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-                Our Team
-              </p>
-            </Link>
-            <Link to="/dashboard/addfunds" onClick={toTop}>
-              <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-                Add Funds
-              </p>
-            </Link>
-            <Link to="/dashboard/complainbox" onClick={toTop}>
-              <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-                Ticket
-              </p>
-            </Link>
-            <Link to="/dashboard/youroffer">
-            <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-              Your Offer
-            </p>
-            </Link>
-
-            <p onClick={() => setMenu(false)} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
-              Contact
-            </p>
-            <Link to="/dashboard/earnmoney" onClick={toTop}>
-              <p onClick={() => setMenu(false)} className="mt-1  text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 pt-2 mb-10">
-                Earn Money
-              </p>
-            </Link>
+ 
 
           </div>
         </div>

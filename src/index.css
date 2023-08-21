@@ -10,3 +10,7 @@
 .dashshadow{
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.border-img { 
+  background-image: url('https://i.ibb.co/chrM9gX/shape-2.png'); 
+  background-repeat: no-repeat;
+}
