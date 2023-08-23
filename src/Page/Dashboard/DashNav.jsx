@@ -1,18 +1,27 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useState } from "react";
 import DashTitle from "./DashTitle";
 import { Icon } from "@iconify/react";
 
 const DashNav = () => {
-  const { user } = useContext(AuthContext)
-  const [menu, setMenu] = useState(false)
+  const { user, logOut } = useContext(AuthContext)
+  const [menu, setMenu] = useState(false);
+  const navigate = useNavigate()
 
 
   const toTop = () => {
     window.scrollTo(0, 0);
   };
+const loggingOut = () =>{
+  console.log("click")
+  logOut().then(() => {
+    alert(" User Has Log out");
+    navigate('/')
+  });
+}
+
   return (
     <div className="flex items-center lg:items-start bg-white">
       <div>
@@ -48,6 +57,11 @@ const DashNav = () => {
                 Awards
               </p>
             </Link>
+            
+              <p onClick={()=> {loggingOut(); () => setMenu(false)}} className="mt-1 text-black text-[10px]   cursor-pointer hover:bg-[#3186EC] hover:text-white font-red rounded-md mx-2 px-3 py-2">
+                Log Out
+              </p>
+            
           </div>
         </div>
       </div>

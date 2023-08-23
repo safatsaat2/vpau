@@ -2,7 +2,7 @@
 const DashHome = () => {
     return (
         <div className="max-w-[1266px] mx-auto">
-            <div className="grid grid-cols-3 gap-x-[28px]">
+            <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-3 gap-x-[28px]">
                 <div className="bg-white rounded-[20px]">
                     <p className="ml-[30px] mt-[30px] text-2xl font-medium text-black">Count</p>
                     <div className="flex justify-between mt-24 ml-6 mb-8">
